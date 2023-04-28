@@ -1,0 +1,11 @@
+.item-list-container {
+  text-align: center;
+  margin-top: 50px;
+  background-color: #fff;
+}
+
+.item-list-container h1 {
+  font-size: 36px;
+  color: #333;
+  text-transform: uppercase;
+}
