@@ -1,28 +1,20 @@
-import CartWdiget from "./CartWidget/CartWidget";
+import CartWidget from "./CartWidget/CartWidget";
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav>
-      <h3>PhoneGear</h3>
-      <div>
-        <ul>
-          <li>
-            <a href="#">Productos</a>
-          </li>
-          <li>
-            <a href="#">Marcas</a>
-          </li>
-          <li>
-            <a href="#">Promociones</a>
-          </li>
-          <li>
-            <a href="#">Ayuda y soporte</a>
-          </li>
-        </ul>
+    <nav className="Navbar">
+      <Link to='/'>
+        <h3>PhoneGear</h3>
+      </Link>
+      <div className="Categories">
+        <NavLink to={'/category/Smartphones'} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} >Celulares</NavLink>
+        <NavLink to={'/category/Tablets'} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} >Tablets</NavLink>
+        <NavLink to={'/category/Notebooks'} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} >Notebooks</NavLink>
       </div>
-      <CartWdiget />
+      <CartWidget />
     </nav>
   );
 };
 
-export default Navbar
+export default Navbar;

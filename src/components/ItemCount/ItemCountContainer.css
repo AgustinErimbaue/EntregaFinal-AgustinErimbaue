@@ -1,0 +1,59 @@
+.Counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+.Controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.Btn:hover {
+  background-color: #555;
+}
+
+.Number {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.Btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mobile-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-img {
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
