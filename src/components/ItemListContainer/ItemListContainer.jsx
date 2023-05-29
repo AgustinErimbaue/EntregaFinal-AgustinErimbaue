@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getProducts, getProductByCategory } from "../data/mobile";
 import './ItemListContainer.css';
 import { useParams } from 'react-router-dom';
-import Item from '../Item/Item'; // Asegúrate de importar el componente Item
+import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = ({ greeting }) => {
   const [mobilePhones, setMobilePhones] = useState([]);
@@ -24,20 +24,7 @@ const ItemListContainer = ({ greeting }) => {
   return (
     <div className="item-list-container">
       <h1>{greeting}</h1>
-      <div className="mobiles-container">
-        {mobilePhones.map(product => (
-          <Item
-            key={product.id}
-            id={product.id}
-            title={product.title}
-            img={product.img}
-            category={product.category}
-            description={product.description}
-            price={product.price}
-            stock={product.stock}
-          />
-        ))}
-      </div>
+      <ItemList mobilePhones={mobilePhones} />
     </div>
   );
 };
