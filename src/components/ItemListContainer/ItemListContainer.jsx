@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { getProducts, getProductByCategory } from "../data/mobile";
-import './ItemListContainer.css';
 import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
+import { getCategoryData, getData } from '../../service/firebase/firebaseConfig';
+import './ItemListContainer.css'
 
 const ItemListContainer = ({ greeting }) => {
   const [mobilePhones, setMobilePhones] = useState([]);
-
   const { categoryId } = useParams();
 
-  useEffect(() => {
-    const asyncFunc = categoryId ? getProductByCategory : getProducts;
+  const fetchData = categoryId ? getCategoryData : getData;
 
-    asyncFunc(categoryId)
+  useEffect(() => {
+    fetchData(categoryId)
       .then(response => {
         setMobilePhones(response);
       })

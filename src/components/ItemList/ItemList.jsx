@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Item from '../Item/Item';
 
 const ItemList = ({ mobilePhones }) => {
   return (
@@ -10,8 +11,6 @@ const ItemList = ({ mobilePhones }) => {
           id={product.id}
           title={product.title}
           img={product.img}
-          category={product.category}
-          description={product.description}
           price={product.price}
           stock={product.stock}
         />

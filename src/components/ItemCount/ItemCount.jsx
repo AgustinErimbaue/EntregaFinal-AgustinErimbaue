@@ -7,20 +7,21 @@ const ItemCount = ({ initial, onAdd, stock }) => {
   const increment = () => {
     console.log("Increment"); // Verificar si se muestra este mensaje en la consola
     if (quantity < stock) {
-      setQuantity((prevQuantity) => prevQuantity + 1);
+      setQuantity(prevQuantity => prevQuantity + 1);
     }
   };
-  
+
   const decrement = () => {
     console.log("Decrement"); // Verificar si se muestra este mensaje en la consola
     if (quantity > 1) {
-      setQuantity((prevQuantity) => prevQuantity - 1);
+      setQuantity(prevQuantity => prevQuantity - 1);
     }
   };
-  
 
-  const handleAddToCart = () => {
-    onAdd(quantity);
+  const handleOnAdd = () => {
+    if (typeof onAdd === 'function') {
+      onAdd(quantity);
+    }
   };
 
   return (
@@ -35,7 +36,7 @@ const ItemCount = ({ initial, onAdd, stock }) => {
         </button>
       </div>
       <div>
-        <button className="Btn" onClick={handleAddToCart} disabled={!stock}>
+        <button className="Btn" onClick={handleOnAdd} disabled={!stock}>
           Agregar al carrito
         </button>
       </div>

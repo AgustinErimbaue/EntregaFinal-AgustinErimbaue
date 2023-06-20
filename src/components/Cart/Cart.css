@@ -1,0 +1,92 @@
+/* Estilos generales */
+.cart-container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.empty-cart {
+  text-align: center;
+}
+
+.empty-cart h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los productos del carrito */
+.cart-items {
+  margin-bottom: 20px;
+}
+
+/* Estilos para la información del comprador */
+.buyer-info {
+  margin-bottom: 20px;
+}
+
+.buyer-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.buyer-info input {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+}
+
+/* Estilos para el resumen del carrito */
+.cart-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.total-quantity {
+  font-size: 18px;
+  color: #333;
+}
+
+.total-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f44336;
+}
+
+/* Estilos para las acciones del carrito */
+.cart-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.clear-cart-button {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.clear-cart-button:hover {
+  background-color: #d32f2f;
+}
+
+.checkout-link {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-link:hover {
+  background-color: #43a047;
+}
+
