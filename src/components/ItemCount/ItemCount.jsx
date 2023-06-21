@@ -5,14 +5,14 @@ const ItemCount = ({ initial, onAdd, stock }) => {
   const [quantity, setQuantity] = useState(parseInt(initial) || 1);
 
   const increment = () => {
-    console.log("Increment"); // Verificar si se muestra este mensaje en la consola
+    console.log("Increment"); 
     if (quantity < stock) {
       setQuantity(prevQuantity => prevQuantity + 1);
     }
   };
 
   const decrement = () => {
-    console.log("Decrement"); // Verificar si se muestra este mensaje en la consola
+    console.log("Decrement"); 
     if (quantity > 1) {
       setQuantity(prevQuantity => prevQuantity - 1);
     }

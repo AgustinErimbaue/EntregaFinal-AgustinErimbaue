@@ -40,13 +40,13 @@ const Cart = () => {
       setShowOrderConfirm(true);
     } catch (error) {
       console.log('Error al confirmar la compra:', error);
-      // Manejar el error, mostrar una notificación de error, etc.
+  
     }
   }
 
   useEffect(() => {
     if (showOrderConfirm) {
-      clearCart(); // Limpia el carrito después de confirmar la compra
+      clearCart(); 
     }
   }, [showOrderConfirm, clearCart]);
 
